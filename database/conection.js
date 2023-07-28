@@ -6,7 +6,6 @@ const mongoose = require("mongoose")
 const conection = async() =>{
 
     try {
-
       //Conexión con la BD
       await mongoose.connect("mongodb://127.0.0.1:27017/blog");
       console.log("Conectado correctamente con la BD");
