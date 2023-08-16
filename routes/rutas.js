@@ -30,12 +30,11 @@ router.post("/crear", articuloController.crear);
 router.get("/listar/:num?", articuloController.listar); //parámetro opcional si ponemos la ?
 router.get("/articulo/:id", articuloController.getArticle);
 router.delete("/articulo/:id", articuloController.borrar);
-router.put("/articulo/:id", articuloController.editar);
+router.put("/editar/:id", articuloController.editar);
 //Single es porque se va a subir un solo fichero. Y el nombre "File" es el que debemos usar como Key al subir. 
 //Se puede poner el que quieras
 router.post("/subir-img/:id", [subidas.single("file")], articuloController.subirImg);
 router.get("/imagen/:filename", articuloController.getImg);
 router.get("/buscar/:texto?", articuloController.buscar);
-
 
 module.exports = router;
